@@ -18,5 +18,6 @@ Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Dashbord
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth:webSession');
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth:webSessionWithLdap');
+Route::get('dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard')
+    ->middleware('auth:webSession,webSessionWithLdap');
