@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => env('AUTH_GUARD', 'webSession'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'usersWithLdap'),
+        'passwords' => env('AUTH_PASSWORD_BROKER', 'webSession'),
     ],
 
     /*
